@@ -6,6 +6,7 @@ SOURCES=$(shell find src -name "*.js")
 
 dist: $(WEBPACK) $(SOURCES) webpack.production.config.js
 	$(WEBPACK) --config webpack.production.config.js
+	cp package.json dest
 
 dev: $(WEBPACK) $(SOURCES) webpack.local.config.js
 	$(WEBPACK) --config webpack.local.config.js
@@ -15,6 +16,7 @@ test: $(KARMA) karma.conf.js
 
 node_modules: package.json
 	npm install
+
 
 
 

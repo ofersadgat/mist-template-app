@@ -8,7 +8,7 @@
     "start": "node webpack.local.server.js",
     "test": "make test",
     "prepublish": "make dist",
-    "postpublish": "node node_modules/.bin/publish"
+    "postpublish": "node_modules/.bin/publish"
   },
   "repository": {
     "type": "git",
