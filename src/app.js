@@ -1,3 +1,18 @@
-import React from 'react';
+const Mist = require('mist');
+const React = require('react');
 
-React.render(<div>HELLO WORLD!</div>, document.querySelector('body'));
+const Window = Mist.Window;
+
+var windowJsx = (
+	<Window title="Hello World" 
+			className="hello-world"
+			canResize={true} 
+			initialX={undefined} 
+			initialY={undefined} 
+			initialHeight={600} 
+			initialWidth={850} >
+		HELLO WORLD
+	</Window>
+);
+Mist.WindowManager.addWindow(windowJsx);
+
